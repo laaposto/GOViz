@@ -97,7 +97,7 @@ var data = new google.visualization.DataTable();
         data.addColumn('number', tag4gr);
         data.addColumn('number', tag5gr);
 
-      data.addRows(1);
+        data.addRows(1);
         data.setValue(0, 0, "ΕΝΟΤΗΤΕΣ");
 
           posoint1=parseFloat(poso1);
@@ -120,7 +120,6 @@ var data = new google.visualization.DataTable();
 
  var options = {
           colors:['green','yellow','red','blue','orange'],
-          //focusTarget:'category',
           tooltip: {showColorCode:true},
           width:customwidthtoptags,
           height: 170,
