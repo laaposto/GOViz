@@ -287,8 +287,6 @@ public class InnerMunUnitParser extends HttpServlet {
 "aprosdioristo"};
 
 
-//String units;
-
 
  protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -719,7 +717,7 @@ JSONObject[] jsons = new JSONObject[aboutdesicions.size()];
 aboutdesicions.toArray(jsons);
 
             for (int i = 0; i < aboutdesicions.size(); i++) {
-                //String organizationId = jsons[i].getJSONObject("metadata").getString("organizationId");
+               
                 String organizationUnitId = jsons[i].getJSONObject("metadata").getString("organizationUnitId");
                 String subject = jsons[i].getJSONObject("metadata").getString("subject");
                 int orgunit=Integer.parseInt(organizationUnitId);
