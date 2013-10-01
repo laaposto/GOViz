@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <title>GOViz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/favicon.ico" />
+
+    <!--Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrapcss/bootstrap.css">
+
+    <!--Datepicker CSS -->
+    <link rel="stylesheet" href="css/datepickercss/jquery.ui.all.css">
+
+<!--Laaposto CSS -->
+    <link rel="stylesheet" href="css/innerunivcss/inneruniv.css">
+
+  </head>
+
+  <body>
+<!--MODALS -->
+<div id="myModal" class="modal hide fade" >
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Δεν βρέθηκαν αποφάσεις!!</h1>
+    <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Προσπαθήστε να αναζητήσετε σε μεγαλύτερο χρονικό παράθυρο</p>
+ </div>
+</div>
+
+<div id="myModal2" class="modal hide fade" >
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Λάθος ημερομηνία!!</h1>
+    <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Παρακαλώ επιλέξτε μια ημερομηνία για το πεδίο ΑΠΟ</p>
+ </div>
+</div>
+
+<div id="myModal3" class="modal hide fade" >
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Η ψήφος σας καταχορύθηκε</h1>
+    <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Η ιστοσελίδα αυτή είναι αυτο-διαχειριζόμενη. Παρακαλώ προσπαθήστε να ψηφίσετε μια φορά!</p>
+ </div>
+</div>
+
+<div id="myModal4" class="modal hide fade" >
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Κάτι πήγε στραβά!!</h1>
+    <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Παρακαλώ ξαναψηφίστε!</p>
+ </div>
+</div>
+
+
+<div id="myModal5" class="modal hide fade" >
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Λάθος ημερομηνία!!</h1>
+    <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Παρακαλώ επιλέξτε μια ημερομηνία για το πεδίο ΕΩΣ</p>
+ </div>
+</div>
+
+<div id="myModal6" class="modal hide fade" >
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Λάθος ημερομηνία!!</h1>
+     <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Παρακαλώ επιλέξτε ένα μεγαλύτερο χρονικό παράθυρο</p>
+ </div>
+</div>
+<!--END MODALS -->
+
+<!--TOP NAV -->
+     <div class="navbar" >
+      <div class="navbar-inner">
+       <div class="container" id="mynavbar">
+
+          <img class="pull-left" src="imgs/goviz_logo.png" alt="LOGO"/>
+
+          <a class="brand" href="about.html">GOViz</a>
+
+            <ul class="nav pull-left">
+              <li style="font-size:13px"><a href="municipalities.html">Δήμοι</a></li>
+              <li style="font-size:13px"><a href="ministries.html">Υπουργεία</a></li>
+              <li class="active" style="font-size:13px"><a href="universities.html">Πανεπιστήμια</a></li>
+            </ul>
+
+           <ul class="nav pull-right">
+              <li style="font-size:13px"><a href="about.html"></a></li>
+            </ul>
+            <span style="margin-left:116px;" class="brand" id="title"></span>
+
+
+       </div>
+      </div>
+    </div>
+<!--END TOP NAV -->
+
+<!--VIZBY -->
+<div id="vizby" class="tabbable tabs-left">
+ <ul class="nav nav-tabs">
+  <li class="active"><a href="#1"data-toggle="tab" onClick="vizclicked('tag')">ΘΕΜΑΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</a></li>
+   <li><a href="#2"data-toggle="tab" onClick="vizclicked('afm')">ΑΦΜ</a></li>
+    <li><a href="#3"data-toggle="tab" onClick="vizclicked('dat')">ΧΡΟΝΟΛΟΓΙΑ</a></li>
+     <li><a href="#4" data-toggle="tab" onClick="vizclicked('uni')">ΜΟΝΑΔΕΣ</a></li>
+ </ul>
+</div>
+<!--END VIZBY -->
+
+<!--CHART -->
+<div id="loading">
+ Φόρτωση αποφάσεων, παρακαλώ περιμένετε...
+  <img id="loadimg" src="imgs/loading.gif" alt="loading.." />
+</div>
+<div id="erase"><div id="chart_div">&nbsp;</div></div>
+<!--END CHART -->
+
+<!--DATEPICKERS -->
+<div id="datepickers">
+ <p style="font-size:10px;cursor:help;" id="apo" rel="popover" data-content="Επιλέξτε ένα χρονικό παράθυρο μέσα στο οποίο επιθυμείτε να αναζητήσετε αποφάσεις" data-original-title="Επιλογή Ημερομηνίας">ΑΠΟ:&nbsp;&nbsp;<input type="text" id="from" name="from" value="Pick a Date" style="width:100px;"></p>
+  <p style="font-size:10px">ΕΩΣ:&nbsp;&nbsp;&nbsp;<input type="text" id="to" name="to" value="Pick a Date" style="width:100px;"></p>
+</div>
+<span id="show" class="btn btn-success" onclick="showdate()" ><i style="padding-left:11px;"class="icon-ok icon-white"></i>SHOW !</span>
+<!--END DATEPICKERS -->
+
+<!--FOOTER -->
+<div id="footer">
+ <div id="footertitle">
+
+    <div id="title">
+        <span id="h1">ΣΥΓΚΕΝΤΡΩΤΙΚΑ ΣΤΟΙΧΕΙΑ</span>
+        <p id="p">Οι πιο πολυέξοδες κατηγορίες και ΑΦΜ του πανεπιστημίου από το Νοέμβριο  του 2010, καθώς και οι αποφάσεις που συνεισφέρουν στο κεντρικό γράφημα κάθε φορά</p>
+    </div>
+
+ </div>
+
+ <div id="footermain">
+
+     <div id="toptags" rel="popover" data-content="Για το συγκεκριμένο πανεπιστήμιο οι πιο δαπανηρές κατηγορίες αθροιστικά από το Νοέμβριο του 2010" data-original-title="ΚΑΤΗΓΟΡΙΕΣ">ΚΑΤΗΓΟΡΙΕΣ</div>
+     <div id="greenline">______________________</div>
+
+     <div id="desicions" rel="popover" data-content="Όλες οι αποφάσεις που συμμετέχουν στο κεντρικό γράφημα. Μπορείτε να τις κατεβάσετε, να τις μαρκάρετε ως διαβλητές αν το βρίσκεται σκόπιμο και να τις μοιραστείτε" data-original-title="ΑΠΟΦΑΣΕΙΣ">ΑΠΟΦΑΣΕΙΣ</div>
+     <div id="yellowline">________________________</div>
+
+     <div id="topafms" rel="popover" data-content="Για το συγκεκριμένο πανεπιστήμιο τα ΑΦΜ που απέσπασαν τα περισσότερα χρήματα αθροιστικά από το Νοέμβριο του 2010" data-original-title="ΑΦΜ">ΑΦΜ</div>
+     <div id="redline">________________________</div>
+
+     <div id="eraselinks"><div id="decisions"></div></div>
+     <div id="load">
+        <img id="loadimage" src="imgs/load.gif" alt="loading.." />
+     </div>
+     <div id="chart_div2"></div>
+     <div id="load2">
+        <img id="loadimage" src="imgs/load.gif" alt="loading.." />
+     </div>
+     <div id="chart_div3"></div>
+
+ </div>
+
+</div>
+<!--END FOOTER -->
+
+
+<!--External JS -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+<!--Bootstrap JS -->
+        <script type="text/javascript" src="javascripts/bootstrapjs/bootstrap.js"></script>
+
+<!--Laaposto JS -->
+        <script type="text/javascript" src="javascripts/innerunivjs/func.js"></script>
+        <script type="text/javascript" src="javascripts/innerunivjs/parsers.js"></script>
+        <script type="text/javascript" src="javascripts/innerunivjs/toptags.js"></script>
+        <script type="text/javascript" src="javascripts/innerunivjs/topafms.js"></script>
+
+<!--Datepicker JS -->
+         <script type="text/javascript" src="javascripts/datepickerjs/jquery.ui.core.js"></script>
+         <script type="text/javascript" src="javascripts/datepickerjs/jquery.ui.datepicker.js"></script>
+
+
+
+
+  </body>
+</html>

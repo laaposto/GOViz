@@ -1,0 +1,217 @@
+<html>
+  <head>
+    <title>GOViz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="imgs/favicon.ico" />
+
+ <!--Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrapcss/bootstrap.css">
+
+ <!--Laaposto CSS -->
+    <link rel="stylesheet" href="css/ministriescss/ministries.css">
+
+  </head>
+  <body onResize="window.location=window.location;">
+<!--MODALS -->
+
+<img src="imgs/beta_ribbon.png" id="beta" style="margin-left:2000px"/>
+
+<div id="myModal" class="modal hide fade" >
+
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Επιλέξτε ένα υπουργείο από την λίστα που εμφανίζεται</h1>
+    <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Αυτό το υπουργείο δεν είναι εγγεγραμμένο στην Διάυγεια</p>
+ </div>
+
+</div>
+
+<div id="myModal2" class="modal hide fade">
+
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Δεν βρέθηκαν αποφάσεις!!</h1>
+    <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Δεν υπάρχουν αποφάσεις αυτή την στιγμή. Μπορείτε να αναζητήσετε αποφάσεις στο υπουργείο της επιλογής σας ή να προσπαθήσετε αργότερα</p>
+ </div>
+
+</div>
+
+<div id="myModal3" class="modal hide fade" >
+
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+   <h1>Η ψήφος σας καταχορύθηκε</h1>
+    <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Η ιστοσελίδα αυτή είναι αυτο-διαχειριζόμενη. Παρακαλώ προσπαθήστε να ψηφίσετε μια φορά!</p>
+   </div>
+</div>
+
+<div id="myModal4" class="modal hide fade" >
+
+ <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+    <h1>Κάτι πήγε στραβά!!</h1>
+     <br>
+ </div>
+
+ <div class="modal-body">
+  <p>Παρακαλώ ξαναψηφίστε!</p>
+ </div>
+</div>
+<!--END MODALS -->
+
+<!--TOP NAV -->
+     <div class="navbar" >
+      <div class="navbar-inner">
+       <div class="container" id="mynavbar">
+
+          <img class="pull-left" src="imgs/goviz_logo.png" alt="LOGO"/>
+
+          <a class="brand" href="about.html">GOViz</a>
+
+            <ul class="nav pull-left">
+              <li style="font-size:13px"><a href="municipalities.html">Δήμοι</a></li>
+              <li class="active" style="font-size:13px"><a href="ministries.html">Υπουργεία</a></li>
+              <li style="font-size:13px"><a href="universities.html">Πανεπιστήμια</a></li>
+            </ul>
+
+           <ul class="nav pull-right">
+              <li style="font-size:13px"><a href="about.html"></a></li>
+            </ul>
+
+
+
+       </div>
+      </div>
+    </div>
+<!--END TOP NAV -->
+
+
+
+
+<!--BODY -->
+     <div id="body">
+
+       <div id="tags">ΘΕΜΑΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</div>
+
+       <div id="loading">
+         Φόρτωση αποφάσεων, παρακαλώ περιμένετε...
+         <img id="loadimg" src="imgs/loading.gif" alt="loading.." />
+       </div>
+
+       <img src="imgs/map.bmp" id="imgbg" />
+
+       <div id="erase" style="height:413px;"><div id="map_canvas"></div></div>
+
+       <div id="autocmp"class="well">
+           <span id="searchmun" rel="popover" data-content="Επιλέξτε ένα υπουργείο από την λίστα που εμφανίζεται. Χρησιμοποιήστε ελληνικούς χαρακτήρες!" data-original-title="Αναζήτηση Υπουργείου">Αναζήτηση υπουργείου</span>
+            <input id="autocomplete" type="text" data-provide="typeahead"/>
+            <span class="icon-search" onClick= "checkmunicipalities()" style="cursor:pointer;"></span>
+          </div>
+
+       <div id="munserase"><div id="municipalities"><span id="municipalitiesspan">ΥΠΟΥΡΓΕΙΑ</span></div></div>
+
+
+     </div>
+<!--END BODY -->
+<div id="footer">
+ <div id="footertitle">
+
+    <div id="title">
+        <span id="h1">ΣΥΓΚΕΝΤΡΩΤΙΚΑ ΣΤΟΙΧΕΙΑ</span>
+        <p id="p">Οι πιο πολυέξοδες κατηγορίες, υπουργεία από τον Οκτώβριο του 2010 και οι πιο πολυψηφισμένες αποφάσεις</p>
+    </div>
+
+ </div>
+
+ <div id="footermain">
+
+     <div id="toptags" rel="popover" data-content="Συγκεντρωτικά για όλα τα υπουργεία οι πιο δαπανηρές κατηγορίες αθροιστικά από τον Οκτώβριο του 2010" data-original-title="ΚΑΤΗΓΟΡΙΕΣ" >ΚΑΤΗΓΟΡΙΕΣ</div>
+     <div id="greenline">______________________</div>
+
+     <div id="topdesicions" rel="popover" data-content="Οι αποφάσεις με τις περισσότερες ψήφους, ως διαβλητές, από τους χρήστες" data-original-title="ΑΠΟΦΑΣΕΙΣ">ΑΠΟΦΑΣΕΙΣ</div>
+     <div id="yellowline">________________________</div>
+
+     <div id="topmuns" rel="popover" data-content="Συγκεντρωτικά τα πιο δαπανηρά υπουργεία από τον Οκτώβριο του 2010" data-original-title="ΔΗΜΟΙ">ΥΠΟΥΡΓΕΙΑ</div>
+     <div id="redline">________________________</div>
+
+     <div id="chart_div"></div>
+
+
+     <div id="line1">______________________________________________________________________________________________________</div>
+     <div id="dec1"></div>
+     <div id="cost1"></div>
+     <div id="dl1" rel="tooltip" data-original-title="Download the pdf"></div>
+     <div id="warn1"></div>
+     <div id="tweet1"><a id="twitter1" target="_blank"><img src="imgs/twitter-bird.png"/></a></div>
+
+     <div id="line2">___________________________________________________________________________________________________</div>
+     <div id="dec2"></div>
+     <div id="cost2"></div>
+     <div id="dl2" rel="tooltip" data-original-title="Download the pdf"></div>
+     <div id="warn2"></div>
+     <div id="tweet2"><a id="twitter2" target="_blank"><img src="imgs/twitter-bird.png"/></a></div>
+
+
+     <div id="line3">___________________________________________________________________________________________________</div>
+     <div id="dec3"></div>
+     <div id="cost3"></div>
+     <div id="dl3" rel="tooltip" data-original-title="Download the pdf"></div>
+     <div id="warn3"></div>
+     <div id="tweet3"><a id="twitter3" target="_blank"><img src="imgs/twitter-bird.png"/></a></div>
+
+
+     <div id="line4">_________________________________________________________________________________________________</div>
+     <div id="dec4"></div>
+     <div id="cost4"></div>
+     <div id="dl4" rel="tooltip" data-original-title="Download the pdf"></div>
+     <div id="warn4"></div>
+     <div id="tweet4"><a id="twitter4" target="_blank"><img src="imgs/twitter-bird.png"/></a></div>
+
+
+     <div id="line5">___________________________________________________________________________________________________</div>
+     <div id="dec5"></div>
+     <div id="cost5"></div>
+     <div id="dl5" rel="tooltip" data-original-title="Download the pdf"></div>
+     <div id="warn5"></div>
+     <div id="tweet5"><a id="twitter5" target="_blank"><img src="imgs/twitter-bird.png"/></a></div>
+
+     <div id="chart_div2"></div>
+
+ </div>
+
+</div>
+
+
+
+
+
+ <!--External JS -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+ <!--Bootstrap JS -->
+    <script type="text/javascript" src="javascripts/bootstrapjs/bootstrapmini.js"></script>
+
+ <!--Laaposto JS -->
+    <script type="text/javascript" src="javascripts/ministriesjs/func.js"></script>
+    <script type="text/javascript" src="javascripts/ministriesjs/parsers.js"></script>
+    <script type="text/javascript" src="javascripts/ministriesjs/toptags.js"></script>
+    <script type="text/javascript" src="javascripts/ministriesjs/topdecisions.js"></script>
+    <script type="text/javascript" src="javascripts/ministriesjs/topmini.js"></script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,388 @@
+#loading {
+    width:326px;
+    text-align:center;
+    font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:5;
+}
+
+#loadimg{
+    width: 0px;
+    margin-left:-12px;
+}
+
+#imgbg{
+    position: absolute;
+    top: 41px;
+    left:105px;
+    width: 0;
+    height: 0;
+}
+
+#map_canvas{
+    position: absolute;
+    top: 41px;
+    left:105px;
+ }
+
+#tags{
+    position:absolute;
+    z-index: 5;
+    overflow:auto;
+    overflow-x:hidden;
+    left:57px;
+    top:60px;
+    color:#999;
+}
+
+#municipalities {
+    position:absolute;
+    z-index: 5;
+    top:60px;
+    overflow:auto;
+    overflow-x:hidden;
+    color:#999;
+    left:3000px;
+}
+
+#autocmp{
+    position:absolute;
+    height: 0px;
+    z-index: 5;
+
+}
+
+#searchmun{
+       font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+       position:absolute;
+       top:2px;
+       cursor:help;
+}
+
+#h1{
+
+   font:bold 18px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+   color:white;
+   margin-left:57px;
+}
+
+#p{
+  font:bold 13px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:white;
+  margin-left:57px;
+}
+
+#footertitle{
+    position: absolute;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(grey), to(black));
+    background: -webkit-linear-gradient(top, black, grey);
+    background: -moz-linear-gradient(top, #black, #grey);
+    background: -ms-linear-gradient(top, #black, #grey);
+    background: -o-linear-gradient(top, #black, #grey);
+
+/* IE10 Consumer Preview */
+background-image: -ms-linear-gradient(bottom, #808080 0%, #000000 100%);
+
+/* Mozilla Firefox */
+background-image: -moz-linear-gradient(bottom, #808080 0%, #000000 100%);
+
+/* Opera */
+background-image: -o-linear-gradient(bottom, #808080 0%, #000000 100%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #808080), color-stop(1, #000000));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-linear-gradient(bottom, #808080 0%, #000000 100%);
+
+/* W3C Markup, IE10 Release Preview */
+background-image: linear-gradient(to top, #808080 0%, #000000 100%);
+
+padding-top: 5px;
+}
+
+#footermain{
+    position: absolute;
+    background-color: grey;
+    height:216px;
+
+}
+
+#toptags{
+    font:bold 15px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-left:57px;
+    margin-top: 11px;
+    position:relative;
+    z-index: 22;
+    width:100px;
+    cursor:help;
+}
+
+#greenline{
+    font:bold 61px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:green;
+    margin-left:57px;
+    margin-top: -60px;
+    overflow: hidden;
+}
+
+#topdesicions{
+    font:bold 15px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: -31px;
+    width:88px;
+    position:relative;
+    z-index: 22;
+    cursor:help;
+}
+
+#yellowline{
+    font:bold 61px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:yellow;
+    margin-top: -60px;
+    overflow: hidden;
+}
+
+#topmuns{
+    font:bold 15px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: -31px;
+    position:relative;
+    z-index: 22;
+    width:54px;
+    cursor:help;
+
+}
+
+#redline{
+    font:bold 61px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:red;
+    margin-top: -60px;
+    overflow: hidden;
+}
+
+#chart_div{
+    margin-left: 55px;
+    height: 170px;
+}
+
+#line1{
+     font:bold 12px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: -150px;
+    overflow: hidden;
+}
+
+#line2{
+     font:bold 12px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+#line3{
+     font:bold 12px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+#line4{
+     font:bold 12px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+#line5{
+     font:bold 12px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: 11px;
+    overflow: hidden;
+}
+
+#dec1{
+     font:bold 10px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     color:white;
+     margin-top:-15px;
+     overflow: hidden;
+     text-overflow:ellipsis;
+     white-space: nowrap
+
+}
+
+#dec2{
+     font:bold 10px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     color:white;
+     margin-top:-15px;
+     overflow: hidden;
+     text-overflow:ellipsis;
+     white-space: nowrap
+
+}
+
+#dec3{
+     font:bold 10px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     color:white;
+     margin-top:-15px;
+     overflow: hidden;
+     text-overflow:ellipsis;
+     white-space: nowrap
+}
+
+#dec4{
+     font:bold 10px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     color:white;
+     margin-top:-15px;
+     overflow: hidden;
+     text-overflow:ellipsis;
+     white-space: nowrap
+
+}
+
+#dec5{
+     font:bold 10px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     color:white;
+     margin-top:-15px;
+     overflow: hidden;
+     text-overflow:ellipsis;
+     white-space: nowrap
+}
+
+#cost1{
+    font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top:-12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+#cost2{
+    font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top:-12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+#cost3{
+    font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top:-12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+#cost4{
+    font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top:-12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+#cost5{
+    font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top:-12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+#dl1{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#dl2{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#dl3{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#dl4{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#dl5{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#warn1{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#warn2{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#warn3{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#warn4{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#warn5{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#tweet1{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#tweet2{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#tweet3{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#tweet4{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#tweet5{
+    margin-top:-17px;
+    position:absolute;
+    z-index: 2;
+}
+
+#chart_div2{
+    margin-top: -137px;
+    height:170px;
+}

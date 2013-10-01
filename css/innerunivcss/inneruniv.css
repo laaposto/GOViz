@@ -1,0 +1,221 @@
+#vizby{
+    margin-left:57px;
+}
+
+#loading {
+    width:326px;
+    text-align:center;
+    font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:5;
+}
+
+#loadimg{
+    width: 0px;
+    margin-left:-12px;
+}
+
+#chart_div{
+    position: absolute;
+    top: 28px;
+    left:325px;
+    z-index: 10;
+}
+
+#datepickers{
+position:absolute;
+z-index: 18;
+top:58px;
+}
+
+#h1{
+
+   font:bold 18px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+   color:white;
+   margin-left:57px;
+}
+
+#p{
+  font:bold 13px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:white;
+  margin-left:57px;
+}
+
+#footertitle{
+    position: absolute;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(grey), to(black));
+    background: -webkit-linear-gradient(top, black, grey);
+    background: -moz-linear-gradient(top, #black, #grey);
+    background: -ms-linear-gradient(top, #black, #grey);
+    background: -o-linear-gradient(top, #black, #grey);
+
+    /* IE10 Consumer Preview */
+background-image: -ms-linear-gradient(bottom, #808080 0%, #000000 100%);
+
+/* Mozilla Firefox */
+background-image: -moz-linear-gradient(bottom, #808080 0%, #000000 100%);
+
+/* Opera */
+background-image: -o-linear-gradient(bottom, #808080 0%, #000000 100%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #808080), color-stop(1, #000000));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-linear-gradient(bottom, #808080 0%, #000000 100%);
+
+/* W3C Markup, IE10 Release Preview */
+background-image: linear-gradient(to top, #808080 0%, #000000 100%);
+
+padding-top: 5px;
+}
+
+#footermain{
+    position: absolute;
+    background-color: grey;
+    height:216px;
+
+}
+
+#toptags{
+    font:bold 15px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-left:57px;
+    margin-top: 11px;
+    position:relative;
+    z-index: 22;
+    width:100px;
+    cursor:help;
+}
+
+#greenline{
+    font:bold 61px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:green;
+    margin-left:57px;
+    margin-top: -60px;
+    overflow: hidden;
+}
+
+#desicions{
+    font:bold 15px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: -31px;
+    width:88px;
+    position:relative;
+    z-index: 22;
+    cursor:help;
+}
+
+#yellowline{
+    font:bold 61px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:yellow;
+    margin-top: -60px;
+    overflow: hidden;
+}
+
+#topafms{
+    font:bold 15px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top: -31px;
+    position:relative;
+    z-index: 22;
+    width:44px;
+    cursor:help;
+}
+
+#redline{
+    font:bold 61px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:red;
+    margin-top: -60px;
+    overflow: hidden;
+}
+
+#chart_div{
+    margin-top:22px;
+   }
+
+
+#decisions{
+overflow:auto;
+overflow-x:hidden;
+height:138px;
+position: absolute;
+z-index:22;
+
+}
+
+#line{
+    font:bold 12px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    overflow: hidden;
+    margin-top:16px;
+}
+
+#dec{
+     font:bold 10px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     color:white;
+     margin-top:-15px;
+     overflow: hidden;
+     text-overflow:ellipsis;
+     white-space: nowrap
+}
+
+#cost{
+    font:bold 11px Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:white;
+    margin-top:-12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+
+}
+
+#dl{
+    margin-top:-17px;
+    z-index: 2;
+    width:15px;
+}
+
+#warn{
+     margin-top:-17px;
+    z-index: 2;
+    width:14px;
+}
+
+#tweet{
+    margin-top:-17px;
+    z-index: 2;
+    width:17px;
+}
+#chart_div2{
+    margin-left:55px;
+    position: absolute;
+    z-index:30;
+}
+
+#load{
+    margin-top:50px;
+    position:absolute;
+    z-index: 2;
+}
+
+#chart_div3{
+    position: absolute;
+    z-index:30;
+
+}
+
+#load2{
+    margin-top:50px;
+    position:absolute;
+    z-index: 2;
+}
+
+#show{
+    position:absolute;
+    top: 125px;
+    cursor: pointer;
+    z-index: 19;
+}
