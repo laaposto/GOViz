@@ -152,7 +152,7 @@ public class InnerMunTopTagsUniversities extends HttpServlet {
 
 
 
-//String units;
+
 
 
  protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -184,8 +184,6 @@ int countglobal=0;
 int orgcount;
 int sum=0;
 
-//String datefrom=request.getParameter("datefrom");
-//String dateto=request.getParameter("dateto");
 
 String mun=request.getParameter("mun");
 String mymun=mun.replaceAll("%20"," ");
