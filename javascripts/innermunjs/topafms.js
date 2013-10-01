@@ -96,7 +96,7 @@ var data2 = new google.visualization.DataTable();
         data2.addColumn('number', mun4gr);
         data2.addColumn('number', mun5gr);
 
-      data2.addRows(1);
+        data2.addRows(1);
         data2.setValue(0, 0, "ΑΦΜ");
 
           posoint1=parseFloat(poso1);
@@ -119,7 +119,6 @@ var data2 = new google.visualization.DataTable();
 
  var options = {
           colors:['green','yellow','red','blue','orange'],
-          //focusTarget:'category',
           tooltip: {showColorCode:true},
           width:customwidthtoptags,
           height: 170,
