@@ -3,11 +3,6 @@ import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-
-
-
-
-
 public class TopTagsSortMinistries extends HttpServlet {
 
 Connection con;
@@ -76,12 +71,12 @@ Connection con;
 
             }
             catch(SQLException e) {
-                 //res.getWriter().write("ERROR");
+               
                 log("SQL eksairesh", e);
                 }
         }
         else {
-            // res.getWriter().write("ERROR");
+            
 
             }
 
