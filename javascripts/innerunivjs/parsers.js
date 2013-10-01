@@ -187,17 +187,17 @@ if(count!=0){
         data.addColumn('string', 'ΕΝΟΤΗΤΕΣ');
          for(i=0;i<count;i++){
 
-           var   str=tagout[i].replace(/a/g,"Α")
-            str=str.replace(/b/g,"Β")
-            str=str.replace(/c/g,"Ψ")
-            str=str.replace(/d/g,"Δ")
-            str=str.replace(/e/g,"Ε")
+   var   str=tagout[i].replace(/a/g,"Α")
+         str=str.replace(/b/g,"Β")
+         str=str.replace(/c/g,"Ψ")
+         str=str.replace(/d/g,"Δ")
+         str=str.replace(/e/g,"Ε")
          str=str.replace(/f/g,"Φ")
-          str=str.replace(/g/g,"Γ")
-          str=str.replace(/h/g,"Η")
-          str=str.replace(/i/g,"Ι")
-          str=str.replace(/j/g,"Ξ")
-          str=str.replace(/k/g,"Κ")
+         str=str.replace(/g/g,"Γ")
+         str=str.replace(/h/g,"Η")
+         str=str.replace(/i/g,"Ι")
+         str=str.replace(/j/g,"Ξ")
+         str=str.replace(/k/g,"Κ")
          str=str.replace(/l/g,"Λ")
          str=str.replace(/m/g,"Μ")
          str=str.replace(/n/g,"Ν")
@@ -227,7 +227,6 @@ if(count!=0){
 
  var options = {
         colors:['green','yellow','red','blue','orange','grey','purple','olive','magenta','cyan','teal','black','navy','maroon','lime','violet','coral','sienna'],
-          //focusTarget:'category',
           tooltip: {showColorCode:true},
           width:customwidthchartdiv,
           height: customheightchartdiv,
@@ -506,17 +505,17 @@ if(count!=0){
 
       posoint=parseFloat(posoout[i]);
 
-      var   str=unitout[i].replace(/a/g,"Α")
-            str=str.replace(/b/g,"Β")
-            str=str.replace(/c/g,"Ψ")
-            str=str.replace(/d/g,"Δ")
-            str=str.replace(/e/g,"Ε")
+   var   str=unitout[i].replace(/a/g,"Α")
+         str=str.replace(/b/g,"Β")
+         str=str.replace(/c/g,"Ψ")
+         str=str.replace(/d/g,"Δ")
+         str=str.replace(/e/g,"Ε")
          str=str.replace(/f/g,"Φ")
-          str=str.replace(/g/g,"Γ")
-          str=str.replace(/h/g,"Η")
-          str=str.replace(/i/g,"Ι")
-          str=str.replace(/j/g,"Ξ")
-          str=str.replace(/k/g,"Κ")
+         str=str.replace(/g/g,"Γ")
+         str=str.replace(/h/g,"Η")
+         str=str.replace(/i/g,"Ι")
+         str=str.replace(/j/g,"Ξ")
+         str=str.replace(/k/g,"Κ")
          str=str.replace(/l/g,"Λ")
          str=str.replace(/m/g,"Μ")
          str=str.replace(/n/g,"Ν")
@@ -802,17 +801,17 @@ if(count!=0){
         data.addColumn('string', 'ΕΝΟΤΗΤΕΣ');
          for(i=0;i<count;i++){
 
-           var   str=tagout[i].replace(/a/g,"Α")
-            str=str.replace(/b/g,"Β")
-            str=str.replace(/c/g,"Ψ")
-            str=str.replace(/d/g,"Δ")
-            str=str.replace(/e/g,"Ε")
+   var   str=tagout[i].replace(/a/g,"Α")
+         str=str.replace(/b/g,"Β")
+         str=str.replace(/c/g,"Ψ")
+         str=str.replace(/d/g,"Δ")
+         str=str.replace(/e/g,"Ε")
          str=str.replace(/f/g,"Φ")
-          str=str.replace(/g/g,"Γ")
-          str=str.replace(/h/g,"Η")
-          str=str.replace(/i/g,"Ι")
-          str=str.replace(/j/g,"Ξ")
-          str=str.replace(/k/g,"Κ")
+         str=str.replace(/g/g,"Γ")
+         str=str.replace(/h/g,"Η")
+         str=str.replace(/i/g,"Ι")
+         str=str.replace(/j/g,"Ξ")
+         str=str.replace(/k/g,"Κ")
          str=str.replace(/l/g,"Λ")
          str=str.replace(/m/g,"Μ")
          str=str.replace(/n/g,"Ν")
@@ -1113,17 +1112,17 @@ if(count!=0){
 
       posoint=parseFloat(posoout[i]);
 
-      var   str=afmout[i].replace(/a/g,"Α")
-            str=str.replace(/b/g,"Β")
-            str=str.replace(/c/g,"Ψ")
-            str=str.replace(/d/g,"Δ")
-            str=str.replace(/e/g,"Ε")
+   var   str=afmout[i].replace(/a/g,"Α")
+         str=str.replace(/b/g,"Β")
+         str=str.replace(/c/g,"Ψ")
+         str=str.replace(/d/g,"Δ")
+         str=str.replace(/e/g,"Ε")
          str=str.replace(/f/g,"Φ")
-          str=str.replace(/g/g,"Γ")
-          str=str.replace(/h/g,"Η")
-          str=str.replace(/i/g,"Ι")
-          str=str.replace(/j/g,"Ξ")
-          str=str.replace(/k/g,"Κ")
+         str=str.replace(/g/g,"Γ")
+         str=str.replace(/h/g,"Η")
+         str=str.replace(/i/g,"Ι")
+         str=str.replace(/j/g,"Ξ")
+         str=str.replace(/k/g,"Κ")
          str=str.replace(/l/g,"Λ")
          str=str.replace(/m/g,"Μ")
          str=str.replace(/n/g,"Ν")
