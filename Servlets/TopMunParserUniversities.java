@@ -25,12 +25,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONObject;
 
 
-
-
-
-
-
-
 public class TopMunParserUniversities extends HttpServlet implements Runnable {
 
 
@@ -39,9 +33,9 @@ Connection con;
 Thread searcher;
 
        public void init(ServletConfig config) throws ServletException {
-    super.init(config);                  // always!
+    super.init(config);                 
     searcher = new Thread(this);
-    searcher.setPriority(Thread.MIN_PRIORITY);  // be a good citizen
+    searcher.setPriority(Thread.MIN_PRIORITY);  
     searcher.start();
 
         try {
@@ -296,13 +290,6 @@ if(countglobal==500){
 
 
 
-
-
-
-
-
-
-
          if (con!=null) {
             try {
                 Statement stmt = con.createStatement();
@@ -325,7 +312,7 @@ if(countglobal==500){
 
                 }
 
-//res.getWriter().write("OK");
+
 
 
 
