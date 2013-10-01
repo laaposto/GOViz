@@ -361,6 +361,7 @@ ArrayList<JSONObject> aboutextrafield = new ArrayList<JSONObject>();
 
                               int sum2=Integer.parseInt(poso2);
                               int orgid=Integer.parseInt(organizationId);
+                            
                             for(orgcount=0;orgcount<16;orgcount++){
                             if(orgid==uids[orgcount]){costs[orgcount]=costs[orgcount]+sum2;
 
