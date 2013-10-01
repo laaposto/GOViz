@@ -37,7 +37,7 @@ public class InnerMunUnitParserMinistries extends HttpServlet {
 };
 
 
-//String units;
+
 
 
  protected void doGet(HttpServletRequest request, HttpServletResponse response)
