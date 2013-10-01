@@ -30,6 +30,7 @@ int af=0;
 int p=0;
 int f=0;
 String[] afms=new String[2000];
+
 for(af=0;af<2000;af++){
 afms[af]="null";
 }
@@ -208,40 +209,38 @@ ArrayList<JSONObject> aboutextrafield = new ArrayList<JSONObject>();
                  value=value.replaceAll("Γ","g");
                  value=value.replaceAll("Δ","d");
                  value=value.replaceAll("Ε","e");
-                value=value.replaceAll("Ζ","z");
-                value=value.replaceAll("Η","h");
-                value=value.replaceAll("Θ","q");
-                value=value.replaceAll("Ι","i");
+                 value=value.replaceAll("Ζ","z");
+                 value=value.replaceAll("Η","h");
+                 value=value.replaceAll("Θ","q");
+                 value=value.replaceAll("Ι","i");
                  value=value.replaceAll("Κ","k");
-              value=value.replaceAll("Λ","l");
-               value=value.replaceAll("Μ","m");
-                value=value.replaceAll("Ν","n");
+                 value=value.replaceAll("Λ","l");
+                 value=value.replaceAll("Μ","m");
+                 value=value.replaceAll("Ν","n");
                  value=value.replaceAll("Ξ","j");
-                value=value.replaceAll("Ο","o");
-                value=value.replaceAll("Π","p");
-                value=value.replaceAll("Ρ","r");
-                value=value.replaceAll("Σ","s");
-                value=value.replaceAll("Τ","t");
-                value=value.replaceAll("Υ","y");
-                value=value.replaceAll("Χ","x");
+                 value=value.replaceAll("Ο","o");
+                 value=value.replaceAll("Π","p");
+                 value=value.replaceAll("Ρ","r");
+                 value=value.replaceAll("Σ","s");
+                 value=value.replaceAll("Τ","t");
+                 value=value.replaceAll("Υ","y");
+                 value=value.replaceAll("Χ","x");
                  value=value.replaceAll("Φ","f");
-                value=value.replaceAll("Ψ","c");
-               value=value.replaceAll("Ω","w");
-               value=value.replaceAll("΄΄","\"");
-               value=value.replaceAll("Ϊ","i");
+                 value=value.replaceAll("Ψ","c");
+                 value=value.replaceAll("Ω","w");
+                 value=value.replaceAll("΄΄","\"");
+                 value=value.replaceAll("Ϊ","i");
                  value=value.replaceAll("΄","'");
                  afm=value;
+
 for(af=0;af<2000;af++){
         if(value.equals(afms[af])){
 found=1;
   break;
+                                  }
 
 
-
-                                    }
-
-
-}
+                      }
  if(found==0){
 
  for(af=0;af<2000;af++){
@@ -250,13 +249,12 @@ found=1;
  afms[af]=value;
 break;
 
-
                                     }
 
 
-}
+                       }
 
- }
+             }
                  found=0;
 
 
