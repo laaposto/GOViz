@@ -1,5 +1,5 @@
 var mun=gup('mun');
- mun=mun.replace(/%20/g," ");
+mun=mun.replace(/%20/g," ");
            var  mungr=mun.replace(/a/g,"Α")
            mungr=mungr.replace(/b/g,"Β")
            mungr=mungr.replace(/c/g,"Ψ")
