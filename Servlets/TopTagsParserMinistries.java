@@ -24,13 +24,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.json.JSONObject;
 
-
-
-
-
-
-
-
 public class TopTagsParserMinistries extends HttpServlet implements Runnable {
 
 
@@ -472,7 +465,6 @@ if(countglobal==500){
 
                 }
 
-//res.getWriter().write("OK");
 
 
 
