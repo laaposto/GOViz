@@ -31,22 +31,10 @@ jQuery('#toptags').popover();
 jQuery('#topdesicions').popover();
 jQuery('#topmuns').popover(options);
 jQuery('#dl1').tooltip();
-//jQuery('#dl2').tooltip();
-//jQuery('#dl3').tooltip();
-//jQuery('#dl4').tooltip();
-//jQuery('#dl5').tooltip();
 
 jQuery('#tweet1').tooltip();
-//jQuery('#tweet2').tooltip();
-//jQuery('#tweet3').tooltip();
-//jQuery('#tweet4').tooltip();
-//jQuery('#tweet5').tooltip();
 
 jQuery('#warn1').tooltip();
-//jQuery('#warn2').tooltip();
-//jQuery('#warn3').tooltip();
-//jQuery('#warn4').tooltip();
-//jQuery('#warn5').tooltip();
 
 customleft=viewportwidth-85;
 beta=document.getElementById('beta');
@@ -351,7 +339,7 @@ for(tagcount=0;tagcount<count2;tagcount++){
            str=str.replace(/z/g,"Ζ")
 
     newa.innerHTML=str;
-   newli.appendChild(newa);
+    newli.appendChild(newa);
                                           }
 
 }
