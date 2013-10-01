@@ -397,7 +397,7 @@ root.addContent(item);
         element.addContent(t);
         item.addContent(element);
 
-         element = new org.jdom.Element("sub");
+        element = new org.jdom.Element("sub");
         t=subjectarray[i];
         element.addContent(t);
         item.addContent(element);
